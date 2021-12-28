@@ -1,5 +1,5 @@
 <template>
- <v-container>
+ <v-container style="height: 1500px;">
     <v-row justify="center">
       <v-col
         v-for="n in 10"
