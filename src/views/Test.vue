@@ -48,7 +48,15 @@
         <p>Words can be like X-rays, if you use them properly—they’ll go through anything. You read and you’re pierced.</p>
     </blockquote>
   </div>
+    <v-sheet
+    :min-height="$vuetify.breakpoint.xs ? 300 : '20vh'"
+    :rounded="$vuetify.breakpoint.xsOnly"
+    color="red"
+  >
+    ...
+  </v-sheet>
     </v-container>
+
 </template>
 <script>
 

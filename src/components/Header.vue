@@ -1,7 +1,7 @@
 <template>
   <div>
         <v-app-bar
-          style="margin: 0 auto;"
+          class="mx-auto"
           fixed
           color="grey lighten-2"
           elevate-on-scroll
@@ -9,9 +9,9 @@
         >
           <v-sheet 
             width="80%"
-            class="d-flex align-center"
+            class="d-flex align-center mx-auto"
             color="grey lighten-2"
-            style="margin: 0 auto">
+            >
             <v-toolbar-title class="font-weight-black">GOTOTOWN</v-toolbar-title>
             <v-text-field
               class="pl-6"
@@ -25,49 +25,29 @@
             <v-btn depressed color="grey lighten-2">
               ログイン
             </v-btn>
-
             <v-btn icon>
               <v-icon>mdi-magnify</v-icon>
             </v-btn>
-
             <v-btn icon>
               <v-icon>mdi-heart</v-icon>
             </v-btn>
-
             <v-btn icon>
               <v-icon>mdi-dots-vertical</v-icon>
             </v-btn>
           </v-sheet>
         </v-app-bar>
-      <v-tabs
-        class="pt-16"
-        v-model="model"
-        centered
-        slider-color="black"
-        color="black"
-        background-color="grey lighten-2"
-      >
-        <v-tab
-          v-for="i in tabItems"
-          :key="i"
-          :href="`#tab-${i}`"
-        >
-          {{  i }}
-        </v-tab>
-      </v-tabs>
+      <HeaderTab></HeaderTab>
+      <HeaderNavigation></HeaderNavigation> 
   </div>
 </template>
 
 <script>
+import HeaderNavigation from "./HeaderNavigation.vue"
+import HeaderTab from "./HeaderTab.vue"
 export default {
-  data(){
-    return {
-      tabItems: [
-        'すべてのアイテム',
-        'シューズアイテム',
-        'コスメアイテム'
-      ]
-    }
+  components: {
+    HeaderNavigation,
+    HeaderTab
   }
 
 }
